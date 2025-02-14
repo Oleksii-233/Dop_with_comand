@@ -1,7 +1,7 @@
 #include "Blok0.h"
 
 void ShowOne() {
-	cout << setw(20) << "Surname" << setw(20) << "Name" << setw(9) << "Math_grades" << setw(9) << "Phisics_grades" << setw(9) << "English_grades" << setw(9) << "Ukrainian_grades" << setw(10) << "Group" << endl;
+	cout << setw(20) << "Surname" << setw(20) << "Name" << setw(9) << "Math" << setw(9) << "Phisics" << setw(9) << "English" << setw(9) << "Ukrainian" << setw(10) << "Group" << endl;
 }
 
 void ShowOne(student s) {

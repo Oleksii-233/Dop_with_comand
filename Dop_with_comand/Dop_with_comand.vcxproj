@@ -129,12 +129,16 @@
   <ItemGroup>
     <ClCompile Include="Blok0.cpp" />
     <ClCompile Include="Blok1.cpp" />
+    <ClCompile Include="Blok2.cpp" />
+    <ClCompile Include="Blok3.cpp" />
     <ClCompile Include="Dop_with_comand.cpp" />
     <ClCompile Include="File_blok.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Blok0.h" />
     <ClInclude Include="Blok1.h" />
+    <ClInclude Include="Blok2.h" />
+    <ClInclude Include="Blok3.h" />
     <ClInclude Include="File_blok.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
