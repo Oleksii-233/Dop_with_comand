@@ -19,6 +19,6 @@ bool IsEmpty(fstream& file) {
 	while (file.read((char*)&s, sizeof(s)))
 		k++;
 
-	return k;
+	return !k;
 
 }

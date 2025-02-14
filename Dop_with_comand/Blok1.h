@@ -8,6 +8,8 @@
 #include <fstream>
 
 #include "File_blok.h"
+#include "Blok0.h"
+
 
 void Smallest(fstream& file);
 
