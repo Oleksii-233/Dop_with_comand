@@ -6,6 +6,8 @@
 #include "File_blok.h"
 #include "Blok1.h"
 
+
+
 void Surnames(fstream& file);
 
 void Grades(fstream& file);

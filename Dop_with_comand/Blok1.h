@@ -6,6 +6,7 @@
 #include "File_blok.h"
 #include "Blok0.h"
 
+
 struct Group {
 	char name[10] = "";
 	student s[15];

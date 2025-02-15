@@ -17,19 +17,8 @@ struct student {
 
 using namespace std;
 
-extern fstream protol;
-extern char name[];
-
 void IsOpen(fstream& file);
 
 bool IsEmpty(fstream& file);
-
-void Add();
-
-void Add(string text);
-
-void Add(student s);
-
-void Read();
 
 #endif

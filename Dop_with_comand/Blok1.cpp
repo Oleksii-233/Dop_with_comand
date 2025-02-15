@@ -1,6 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "Blok1.h"
 
 #include "Blok2.h"
+
 
 int GetCountFromFile(fstream& file, student* s) {
 	student stud;
