@@ -12,7 +12,7 @@ struct Group {
 	student s[15];
 	int k = 0;
 
-	double aM = 0, aP = 0, aE = 0, aU = 0;
+	subject sub[4] = { {"aM",0 } ,{"aP",0}, {"aE",0}, {"aU",0} };
 };
 
 void Smallest(fstream& file);
@@ -21,13 +21,7 @@ int GetCountFromFile(fstream& file, student* s);
 
 void CalcucaleAverInGroup(Group& g);
 
-void Math_s(Group* p, int s);
-
-void Phicics_s(Group* p, int s);
-
-void English_s(Group* p, int s);
-
-void Ukrainian_s(Group* p, int s);
+void GroupSort(Group* g, int size, int ind);
 
 void ShowArrGroup(Group* p, int s);
 

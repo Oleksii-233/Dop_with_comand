@@ -31,7 +31,12 @@ void Smallest(fstream& file) {
 	k = GetCountFromFile(file, students);
 
 	for (int i = 0; i < k; k++) {
-		(students + i)->aver = (students[i].math + students[i].phisic + students[i].english + students[i].ukrainian) / 4.;
+		
+		for (int j = 0; j < 4; j++)
+			students[i].aver += students[i].sub[j].grade;
+
+		students[i].aver /= 4;
+
 		if (min > students[i].aver)
 			min = students[i].aver;
 	}
@@ -48,53 +53,24 @@ void Smallest(fstream& file) {
 
 void CalcucaleAverInGroup(Group& g) {
 
-	for (int i = 0; i < g.k; i++) {
-		g.aM += g.s[i].math;
-		g.aP += g.s[i].phisic;
-		g.aE += g.s[i].english;
-		g.aU += g.s[i].ukrainian;
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < g.k; j++) 
+			g.sub[i].grade += g.s[j].sub[i].grade;
+		
+		g.sub[i].grade /= g.k;
 	}
 
-	g.aM /= g.k;
-	g.aP /= g.k;
-	g.aE /= g.k;
-	g.aU /= g.k;
-
 }
 
-void Math_s(Group* p, int s) {
+// 0 - Math, 1 - Phisic, 2 - English, 3 - Ukrainian
 
-	for (int i = 0; i < s - 1; i++)
-		for (int j = i + 1; j < s; j++)
-			if (p[i].aM > p[j].aM)
-				swap(p[i], p[j]);
+void GroupSort(Group* g, int size, int ind) { 
 
-}
-
-void Phicics_s(Group* p, int s) {
-
-	for (int i = 0; i < s - 1; i++)
-		for (int j = i + 1; j < s; j++)
-			if (p[i].aP > p[j].aP)
-				swap(p[i], p[j]);
-
-}
-
-void English_s(Group* p, int s) {
-
-	for (int i = 0; i < s - 1; i++)
-		for (int j = i + 1; j < s; j++)
-			if (p[i].aE > p[j].aE)
-				swap(p[i], p[j]);
-
-}
-
-void Ukrainian_s(Group* p, int s) {
-
-	for (int i = 0; i < s - 1; i++)
-		for (int j = i + 1; j < s; j++)
-			if (p[i].aU > p[j].aU)
-				swap(p[i], p[j]);
+	for(int i = 0; i < size - 1; i++)
+		for (int j = i + 1; j < size; j++) 
+			if (g[i].sub[ind].grade > g[j].sub[ind].grade)
+				swap(g[i], g[j]);
+		
 
 }
 
@@ -149,20 +125,10 @@ void Reyt(fstream& file) {
 	for (int i = 0; i < size; i++)
 		CalcucaleAverInGroup(g[i]);
 	
-	cout << "Reyt for math: ";
-	Math_s(g, size);
-	ShowArrGroup(g, size);
-
-	cout << "Reyt for phicics: ";
-	Phicics_s(g, size);
-	ShowArrGroup(g, size);
-
-	cout << "Reyt for english: ";
-	English_s(g, size);
-	ShowArrGroup(g, size);
-
-	cout << "Reyt for ukrainian: ";
-	Ukrainian_s(g, size);
-	ShowArrGroup(g, size);
+	for (int i = 0; i < 4; i++) {
+		cout << "Sorting group for this subject - " << g[0].s[0].sub[i].name << endl;
+		GroupSort(g, size, i);
+		ShowArrGroup(g, size);
+	}
 
 }

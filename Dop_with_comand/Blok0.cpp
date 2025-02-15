@@ -1,11 +1,18 @@
 #include "Blok0.h"
 
 void ShowOne() {
-	cout << setw(20) << "Surname" << setw(20) << "Name" << setw(9) << "Math" << setw(9) << "Phisics" << setw(9) << "English" << setw(9) << "Ukrainian" << setw(10) << "Group" << endl;
+	cout << setw(20) << "Surname" << setw(20) << "Name" << setw(10) << "Math" << setw(10) << "Phisics" << setw(10) << "English" << setw(10) << "Ukrainian" << setw(10) << "Group" << endl;
 }
 
 void ShowOne(student s) {
-	cout << setw(20) << s.surname << setw(20) << s.name << setw(10) << s.group << setw(10) << s.math << setw(10) << s.phisic << setw(10) << s.english << setw(10) << s.ukrainian << endl;
+	cout << setw(20) << s.surname << setw(20) << s.name;
+
+	for (int i = 0; i < 4; i++) 
+		cout << setw(10) << s.sub[i].grade;
+	
+
+	cout << setw(10) << s.group << endl;
+
 }
 
 int NormalNumber() {
@@ -21,10 +28,11 @@ int NormalNumber() {
 void EnterPeople(student& s) {
 	cout << "Enter people surname: "; cin.ignore();  cin.getline(s.surname, 20);
 	cout << "Enter people name: "; cin.getline(s.name, 20);
-	cout << "Enter people grades from math: "; cin >> s.math;
-	cout << "Enter people grades from phisics: "; cin >> s.phisic;
-	cout << "Enter people grades from english: ";cin >> s.english;
-	cout << "Enter people grades from ukrainian: "; cin >> s.ukrainian;
+
+	for (int i = 0; i < 4; i++) {
+		cout << "Grade from " << s.sub[i].name << " is: "; s.sub[i].grade = NormalNumber();
+	}
+
 }
 
 void WriteInFile(fstream& file) {

@@ -8,10 +8,17 @@
 #include <fstream>
 #include <string>
 
+struct subject {
+	char name[10];
+
+	int grade = 0;
+};
+
 struct student {
 	char name[20], surname[20], group[10];
 
-	int math, phisic, english, ukrainian;
+	subject sub[4] = { {"math",0}, {"phisiscs",0}, {"english",0}, {"ukrainian",0}};
+
 	double aver = 0;
 };
 
