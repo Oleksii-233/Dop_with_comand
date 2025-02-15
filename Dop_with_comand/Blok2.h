@@ -7,11 +7,9 @@
 #include "Blok1.h"
 
 
-
 void Surnames(fstream& file);
 
 void Grades(fstream& file);
-
 
 void Sorting(student* s, int size);
 

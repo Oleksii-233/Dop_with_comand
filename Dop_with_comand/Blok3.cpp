@@ -1,5 +1,7 @@
 #include "Blok3.h"
 
+#include <iostream>
+
 void Sort(fstream& file) {
 	student s[15];
 
@@ -26,64 +28,25 @@ void Shap(student s) {
 	cout << setw(20) << s.surname << setw(20) << s.name << setw(10) << s.group << endl;
 }
 
-void E_P_M(student* s, int k) {
+// Приймає масив з номерів предметів та масив із відповідних оцінок для цих предметів, номера предметів і оцінок відповідні
+void ShowPeopleForSubAndGrades(student* s, int k, int* subj, int* grades) {
 	bool find = false;
 
 	for (int i = 0; i < k; i++) 
-		if (s[i].english == 5 && s[i].phisic == 5 && s[i].math == 3)
+		if (s[i].sub[subj[0]].grade == grades[0] && s[i].sub[subj[1]].grade == grades[1] && s[i].sub[subj[2]].grade == grades[2])
 			find = true;
 
 	if (find) {
 		Shap();
 
 		for (int i = 0; i < k; i++)
-			if (s[i].english == 5 && s[i].phisic == 5&& s[i].math == 3)
+			if (s[i].sub[subj[0]].grade == grades[0] && s[i].sub[subj[1]].grade == grades[1] && s[i].sub[subj[2]].grade == grades[2])
 				Shap(s[i]);
 
 	}
 	else
 		cout << "Not find" << endl;
 	
-}
-
-void U_P_E(student* s, int k) {
-	bool find = false;
-
-	for (int i = 0; i < k; i++)
-		if (s[i].ukrainian == 3 && s[i].phisic == 4 && s[i].english == 3)
-			find = true;
-
-	if (find) {
-		Shap();
-
-		for (int i = 0; i < k; i++)
-			if (s[i].ukrainian == 3 &&  s[i].phisic == 4 && s[i].english == 3)
-				Shap(s[i]);
-
-	}
-	else
-		cout << "Not find" << endl;
-
-}
-
-void M_P_E(student* s, int k) {
-	bool find = false;
-
-	for (int i = 0; i < k; i++)
-		if (s[i].math == 5 && s[i].phisic == 3 && s[i].english == 4)
-			find = true;
-
-	if (find) {
-		Shap();
-
-		for (int i = 0; i < k; i++)
-			if (s[i].math == 5 && s[i].phisic == 3 && s[i].english == 4)
-				Shap(s[i]);
-
-	}
-	else
-		cout << "Not find" << endl;
-
 }
 
 void ShowForGrades(fstream& file) {
@@ -99,13 +62,15 @@ void ShowForGrades(fstream& file) {
 	int k = GetCountFromFile(file, s);
 
 	cout << "Have 5 from english, phisics ans 3 from math: " << endl;
-	E_P_M(s, k);
+	int subjects[] = { 2,1,0 }; int grades[] = { 5,5,3 };
+	ShowPeopleForSubAndGrades(s, k, subjects, grades);
 
 	cout << "Have 3 from ukrainian, english and 4 from phisics " << endl;
-	U_P_E(s, k);
+	int subjects0[] = { 3,2,1 }; int grades0[] = { 3,3,4 };
+	ShowPeopleForSubAndGrades(s, k, subjects0, grades0);
 
 	cout << "Have 5 from math, 3 from phisic, 4 fron english" << endl;
-	M_P_E(s, k);
+	int subjects1[] = { 0,1,2 }; int grades1[] = { 5,3,4 };
+	ShowPeopleForSubAndGrades(s, k, subjects1, grades1);
 	
-
 }

@@ -15,10 +15,6 @@ void Shap();
 
 void Shap(student s);
 
-void E_P_M(student* s, int k);
-
-void U_P_E(student* s, int k);
-
-void M_P_E(student* s, int k);
+void ShowPeopleForSubAndGrades(student* s, int k, int* subj, int* grades);
 
 #endif 
