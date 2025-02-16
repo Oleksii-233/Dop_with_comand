@@ -8,7 +8,9 @@ void Sort(fstream& file) {
 	IsOpen(file);
 
 	if (IsEmpty(file)) {
-		cout << "File is empty." << endl;
+		string text = "File is empty.";
+		cout << text << endl;
+		App(text);
 		return;
 	}
 
@@ -38,15 +40,20 @@ void ShowPeopleForSubAndGrades(student* s, int k, int* subj, int* grades) {
 
 	if (find) {
 		Shap();
+		App();
 
 		for (int i = 0; i < k; i++)
-			if (s[i].sub[subj[0]].grade == grades[0] && s[i].sub[subj[1]].grade == grades[1] && s[i].sub[subj[2]].grade == grades[2])
+			if (s[i].sub[subj[0]].grade == grades[0] && s[i].sub[subj[1]].grade == grades[1] && s[i].sub[subj[2]].grade == grades[2]) {
 				Shap(s[i]);
+				App(s[i]);
+			}
 
 	}
-	else
-		cout << "Not find" << endl;
-	
+	else {
+		string text = "Not find";
+		cout << text << endl;
+		App(text);
+	}
 }
 
 void ShowForGrades(fstream& file) {
@@ -54,22 +61,31 @@ void ShowForGrades(fstream& file) {
 	IsOpen(file);
 
 	if (IsEmpty(file)) {
-		cout << "File is empty." << endl;
+		string text = "File is empty.";
+		cout << text << endl;
+		App(text);
 		return;
 	}
 
 	student s[15];
 	int k = GetCountFromFile(file, s);
 
-	cout << "Have 5 from english, phisics ans 3 from math: " << endl;
+	string t = "Have 5 from english, phisics ans 3 from math: ";
+	cout << t << endl;
+	App(t);
 	int subjects[] = { 2,1,0 }; int grades[] = { 5,5,3 };
 	ShowPeopleForSubAndGrades(s, k, subjects, grades);
 
-	cout << "Have 3 from ukrainian, english and 4 from phisics " << endl;
+	t = "Have 3 from ukrainian, english and 4 from phisics ";
+	cout << t << endl;
+	App(t);
 	int subjects0[] = { 3,2,1 }; int grades0[] = { 3,3,4 };
 	ShowPeopleForSubAndGrades(s, k, subjects0, grades0);
 
-	cout << "Have 5 from math, 3 from phisic, 4 fron english" << endl;
+	t = "Have 5 from math, 3 from phisic, 4 fron english";
+	cout << t << endl;
+	App(t);
+
 	int subjects1[] = { 0,1,2 }; int grades1[] = { 5,3,4 };
 	ShowPeopleForSubAndGrades(s, k, subjects1, grades1);
 	
