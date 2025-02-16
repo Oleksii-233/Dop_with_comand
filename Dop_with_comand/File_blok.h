@@ -4,9 +4,16 @@
 #define FILE_BLOK_H
 
 #include <iostream>
+
 #include <iomanip>
 #include <fstream>
 #include <string>
+
+using namespace std;
+
+extern fstream protocol;
+
+extern char name[];
 
 struct subject {
 	char name[10];
@@ -22,10 +29,17 @@ struct student {
 	double aver = 0;
 };
 
-using namespace std;
 
 void IsOpen(fstream& file);
 
 bool IsEmpty(fstream& file);
+
+void App();
+
+void App(string text);
+
+void App(student s);
+
+void ReadFile();
 
 #endif

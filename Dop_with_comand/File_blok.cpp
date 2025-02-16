@@ -1,13 +1,15 @@
 #include "File_blok.h"
 
-void IsOpen(fstream& file) {
+fstream protocol;
+char name[] = "fixator.txt";
 
+void IsOpen(fstream& file) {
 	if (!file.is_open()) {
 		cout << "File isn`t open." << endl;
-		exit(1);
+		return;
 	}
-
 }
+
 
 bool IsEmpty(fstream& file) {
 
@@ -25,3 +27,47 @@ bool IsEmpty(fstream& file) {
 
 }
 
+void App() {
+
+	IsOpen(protocol);
+
+	protocol << setw(20) << "Surname" << setw(20) << "Name" << setw(10) << "Math" << setw(10) << "Phisics" << setw(10) << "English" << setw(10) << "Ukrainian" << setw(10) << "Group" << endl;
+
+}
+
+void App(string text) {
+
+	IsOpen(protocol);
+
+	protocol << text << endl;
+
+}
+
+void App(student s) {
+
+	IsOpen(protocol);
+
+	protocol << setw(20) << s.surname << setw(20) << s.name;
+
+	for (int i = 0; i < 4; i++)
+		protocol << setw(10) << s.sub[i].grade;
+
+
+	protocol << setw(10) << s.group << endl;
+
+}
+
+void ReadFile() {
+
+	protocol.open(name, ios::in);
+
+	IsOpen(protocol);
+
+	string Line;
+
+	while (protocol >> Line)
+		cout << Line << endl;
+
+	protocol.close();
+
+}

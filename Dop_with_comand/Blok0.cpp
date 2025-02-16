@@ -41,10 +41,14 @@ void WriteInFile(fstream& file) {
 
 	IsOpen(file);
 
-	cout << "Enter count of people: "; n = NormalNumber();
+	string text = "Enter count of people: ";
+	cout << text; n = NormalNumber();
+	App(text); App(to_string(n));
 
+	App();
 	for (int i = 0; i < n; i++) {
 		EnterPeople(s);
+		App(s);
 		file.write((char*)&s, sizeof(s));
 	}
 	
@@ -56,15 +60,19 @@ void ShowAllFile(fstream& file) {
 	IsOpen(file);
 
 	if (IsEmpty(file)) {
-		cout << "File is empty." << endl;
+		string text = "File is empty.";
+		App(text);
+		cout << text << endl;
 		return;
 	}
 
 		ShowOne();
+		App();
 
-	while (file.read((char*)&s, sizeof(s)))
-		ShowOne(s);
-	
+		while (file.read((char*)&s, sizeof(s))) {
+			ShowOne(s);
+			App(s);
+		}
 }
 
 void AppendInFile(fstream& file) {
@@ -73,10 +81,13 @@ void AppendInFile(fstream& file) {
 
 	IsOpen(file);
 
-	cout << "Enter count of people: "; n = NormalNumber();
+	string text = "Enter count of people: ";
+	cout << text; n = NormalNumber();
+	App(text), App(to_string(n)); App();
 
 	for (int i = 0; i < 1; i++) {
 		EnterPeople(s);
+		App(s);
 		file.write((char*)&s, sizeof(s));
 	}
 

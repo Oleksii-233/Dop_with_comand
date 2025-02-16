@@ -24,7 +24,8 @@ void Smallest(fstream& file) {
 	IsOpen(file);
 
 	if (IsEmpty(file)) {
-		cout << "File is empty." << endl;
+		string text = "File is empty.";
+		cout << text << endl; App(text);
 		return;
 	}
 
@@ -41,14 +42,17 @@ void Smallest(fstream& file) {
 			min = students[i].aver;
 	}
 
-	cout << "People with smallest average grade " << min << endl;
+	string text = "People with smallest average grade ";
+	cout << text << min << endl;
+	App(text); App(to_string(min)); App();
 
 	ShowOne();
 
 	for (int i = 0; i < k; i++) 
-		if (students[i].aver == min)
+		if (students[i].aver == min) {
 			ShowOne(students[i]);
-	
+			App(students[i]);
+		}
 }
 
 void CalcucaleAverInGroup(Group& g) {
@@ -74,10 +78,13 @@ void GroupSort(Group* g, int size, int ind) {
 
 }
 
-
 void ShowArrGroup(Group* p, int s) {
-	for (int i = 0; i < s; i++)
+	App();
+
+	for (int i = 0; i < s; i++) {
 		cout << p[i].name;
+		App(p[i].name);
+	}
 }
 
 void Reyt(fstream& file) {
@@ -85,7 +92,9 @@ void Reyt(fstream& file) {
 	IsOpen(file);
 
 	if (IsEmpty(file)) {
-		cout << "File is empty." << endl;
+		string text = "File is empty.";
+		cout << text << endl;
+		App(text);
 		return;
 	}
 
@@ -126,7 +135,9 @@ void Reyt(fstream& file) {
 		CalcucaleAverInGroup(g[i]);
 	
 	for (int i = 0; i < 4; i++) {
-		cout << "Sorting group for this subject - " << g[0].s[0].sub[i].name << endl;
+		string text0 = "Sorting group for this subject - ";
+		cout <<  text0 << g[0].s[0].sub[i].name << endl;
+		App(text0), App(g[0].s[0].sub[i].name);
 		GroupSort(g, size, i);
 		ShowArrGroup(g, size);
 	}
