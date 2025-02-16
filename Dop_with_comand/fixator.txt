@@ -1,0 +1,169 @@
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+0
+Enter count of people: 
+3
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+                   A                   B        12        12        12        12         B
+                   A                   C        11        11        11        11         C
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+0
+Enter count of people: 
+3
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+                   A                   A        12        12        12        12         A
+                   A                   B        12       121        12        12         B
+                   A                   C        12        12        12        12        12
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+1
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+                   A                   A        12        12        12        12         A
+                   A                   B        12       121        12        12         B
+                   A                   C        12        12        12        12        12
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+5
+Enter searching surname: 
+A
+People not find.
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+5
+Enter searching surname: 
+A
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+                   A                   C        12        12        12        12        12
+                   A                   A        12        12        12        12         A
+                   A                   B        12       121        12        12         B
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+111
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+6
+Enter two numbers of subjects (0 - math, 1 - phisic, 2 - english, 3 - ukrainian): 
+0
+1
+Students who have 4 or 5 from 2 subjects: 
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+Not Find.
+Enyer three numbers of subjects (0 - math, 1 - phisic, 2 - english, 3 - ukrainian):
+1
+2
+3
+Students who have 3 or 4 from  3 subjects: 
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+Not Find.
+People, who have 5 or 3 from 4 subjects: 
+             Surname                Name      Math   Phisics   English Ukrainian     Group
+Not Find.
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+7
+Have 5 from english, phisics ans 3 from math: 
+Not find
+Have 3 from ukrainian, english and 4 from phisics 
+Not find
+Have 5 from math, 3 from phisic, 4 fron english
+Not find
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+8
+                   A                   C        12        12        12        12        12
+                   A                   A        12        12        12        12         A
+                   A                   B        12       121        12        12         B
+0 - Create and write in file
+1 - Show all file on screen
+2 - Append in a file
+3 - People with smallest average grade
+4 - Reyt for group
+5 - Data for peopel with identical surnames
+6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects
+7 - grades from subjects
+8 - sorting for group
+Another number to exit
+111

@@ -12,7 +12,7 @@ int main() {
 	string text[] = { "0 - Create and write in file", "1 - Show all file on screen", "2 - Append in a file","3 - People with smallest average grade", "4 - Reyt for group", "5 - Data for peopel with identical surnames", "6 - Have 5, 4 from 2 subject, 4,3 from 3 subjects, 5,3 from 4 subjects", "7 - grades from subjects", "8 - sorting for group", "Another number to exit"};
 
 	do {
-		protocol.open(name, ios::out || ios::app || ios::binary);
+		protocol.open(name, ios::out | ios::app);
 
 		for (int i = 0; i < 10; i++) {
 			cout << text[i] << endl;

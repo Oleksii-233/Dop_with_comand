@@ -41,29 +41,19 @@ void Surnames(fstream& file) {
 
 	string text0 = "Enter searching surname: ";
 	cout << text0;
-	cin.ignore(); cin.getline(fname, 20);
+	
+	cin.getline(fname, 20);
+	
 	App(text0); App(fname);
 
-	bool add[15] = { false };
 	student n[15];
 	int nsize = 0;
 
-	for (int i = 0; i < size - 1; i++) 
-		for (int j = i + 1; j < size; j++) 
-			if (strcmp(s[i].surname, fname) == 0 && strcmp(s[j].surname, fname) == 0) {
-				if (!add[i]) {
-					n[nsize++] = s[i];
-					add[i] = true;
-				}
-				if (!add[j]) {
-					n[nsize++] = s[j];
-					add[j] = true;
-
-				}
-				k++;
-			}
+	for (int i = 0; i < size; i++) 
+		if (strcmp(s[i].surname, fname) == 0) 
+			n[nsize++] = s[i];
 		
-	if (!k) {
+	if (nsize < 2) {
 		string text1 = "People not find.";
 		cout << text1 << endl;
 		App(text1);
@@ -120,7 +110,7 @@ void ShowPeopleGradesFromSubject(fstream& file) {
 
 	ShowOne();
 	for (int i = 0; i < k; i++) 
-		if (s[i].sub[n_sub[0]].grade >= 4 && s[i].sub[n_sub[1]].grade >= 4) {
+		if (s[i].sub[n_sub[0]].grade == 4 || s[i].sub[n_sub[0]].grade == 5 && s[i].sub[n_sub[1]].grade == 4 || s[i].sub[n_sub[1]].grade == 5) {
 			a++;
 			ShowOne(s[i]);
 			App(s[i]);

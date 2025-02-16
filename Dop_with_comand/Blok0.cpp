@@ -28,10 +28,13 @@ int NormalNumber() {
 void EnterPeople(student& s) {
 	cout << "Enter people surname: "; cin.ignore();  cin.getline(s.surname, 20);
 	cout << "Enter people name: "; cin.getline(s.name, 20);
+	cout << "Enter people group: "; cin.getline(s.group, 10);
 
 	for (int i = 0; i < 4; i++) {
 		cout << "Grade from " << s.sub[i].name << " is: "; s.sub[i].grade = NormalNumber();
 	}
+
+	
 
 }
 
@@ -85,7 +88,7 @@ void AppendInFile(fstream& file) {
 	cout << text; n = NormalNumber();
 	App(text), App(to_string(n)); App();
 
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < n; i++) {
 		EnterPeople(s);
 		App(s);
 		file.write((char*)&s, sizeof(s));
